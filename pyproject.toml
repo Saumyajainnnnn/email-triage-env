@@ -16,5 +16,8 @@ dependencies = [
     "openenv-core",
 ]
 
+[project.scripts]
+server = "server.main:app"
+
 [project.optional-dependencies]
 client = ["httpx", "pydantic>=2"]
