@@ -1,0 +1,22 @@
+name: email-triage-env
+version: "1.0.0"
+description: >
+  Simulates a real corporate email inbox. An AI agent must triage,
+  route, and respond to emails under time pressure and SLA constraints.
+author: saumyajain786
+tasks:
+  - id: task_sort
+    difficulty: easy
+    max_score: 1.0
+  - id: task_route_reply
+    difficulty: medium
+    max_score: 1.0
+  - id: task_sla_escalate
+    difficulty: hard
+    max_score: 1.0
+observation_space:
+  type: object
+  fields: [task_id, description, emails, step_count, message]
+action_space:
+  type: object
+  fields: [task_id, payload]
