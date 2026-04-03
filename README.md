@@ -1,3 +1,13 @@
+---
+title: Email Triage Environment
+emoji: 📧
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Email Triage Environment
 
 An OpenEnv-compatible environment that simulates a real corporate email inbox.
