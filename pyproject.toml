@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "email-triage-env"
@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "server.main:app"
+server = "server.app:main"
 
 [project.optional-dependencies]
 client = ["httpx", "pydantic>=2"]
