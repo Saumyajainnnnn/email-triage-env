@@ -92,8 +92,10 @@ async def run_task(env: EmailTriageEnv, client: OpenAI, task_idx: int, task_name
             if done:
                 break
 
-        score = max(rewards) if rewards else 0.0
+        score = max(rewards) if rewards else 0.01
+        score = min(max(score, 0.01), 0.99)
         success = score >= 0.5
+
 
     except Exception as e:
         log_step(step=steps_taken+1, action="error", reward=0.0, done=True, error=str(e))
